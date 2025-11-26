@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 400;
+    vertical-align: baseline;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 82px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mchn-logo {
+    max-width: 532px;
+    width: auto;
+    height: auto;
+    max-height: 133px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tagline */
+.tagline {
+    text-align: left;
+    font-size: 18pt;
+    line-height: 1.7;
+    color: #ffffff;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 400;
+    vertical-align: baseline;
+    max-width: 532px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+    text-align: left;
+    width: 100%;
+    max-width: 532px;
+    margin: 0 auto;
+}
+
+.section-header h2 {
+    font-size: 18pt;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    vertical-align: baseline;
+    letter-spacing: 0.5px;
+}
+
+/* Companies Grid */
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 80px;
+    width: 100%;
+    max-width: 532px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: start;
+    overflow: visible;
+}
+
+/* Last row: Rimba on left, Extellis aligned with Rimba */
+.company-item:nth-last-child(2) {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.company-item:last-child {
+    grid-column: 2;
+    justify-self: start;
+    margin-left: -127px;
+    margin-top: -50px;
+}
+
+.company-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    overflow: visible;
+}
+
+/* Align last row logos to left */
+.company-item:nth-last-child(2),
+.company-item:last-child {
+    align-items: flex-start;
+}
+
+.company-status {
+    font-size: 11pt;
+    color: #ffffff;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 400;
+    vertical-align: baseline;
+    opacity: 0.9;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Ensure Acquired text aligns properly under Cruise and Celect */
+.company-item:nth-child(1) .company-status,
+.company-item:nth-child(2) .company-status {
+    text-align: center;
+    align-self: center;
+}
+
+/* Move Acquired text under Cruise down by 10px */
+.company-item:nth-child(1) .company-status {
+    margin-top: 18px;
+}
+
+/* Move Acquired text under Celect up by 15px */
+.company-item:nth-child(2) .company-status {
+    margin-top: -5px;
+}
+
+/* Company Logo Styles */
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    width: 100%;
+    overflow: visible;
+}
+
+/* Logo link styling */
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    line-height: 0;
+}
+
+/* Ensure Extellis link only covers the logo image */
+.company-item:last-child .logo-link {
+    display: inline-block;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.company-item:last-child .logo-link img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-link:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Align last row logo containers to left */
+.company-item:nth-last-child(2) .company-logo,
+.company-item:last-child .company-logo {
+    justify-content: flex-start;
+    width: auto;
+}
+
+
+.logo-image {
+    max-width: 100%;
+    max-height: 105px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Cruise logo - move down 11px */
+.logo-image[alt="Cruise"] {
+    margin-top: 11px;
+}
+
+/* Rimba logo - 2x larger */
+.logo-image[alt="Rimba"] {
+    max-height: 210px;
+}
+
+/* Celect logo - 1.25x larger */
+.logo-image[alt="Celect"] {
+    max-width: 125%;
+    max-height: 131.25px;
+    width: auto;
+    height: auto;
+}
+
+/* Extellis logo - 2x larger */
+.company-item:last-child .logo-image[alt="Extellis"] {
+    max-width: 200%;
+    max-height: 210px;
+    width: auto;
+    height: auto;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 0.7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 40px;
+        max-width: 100%;
+    }
+    
+    .container {
+        gap: 40px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+    }
+    
+    /* Reset last row positioning for mobile */
+    .company-item:nth-last-child(2) {
+        grid-column: auto;
+        justify-self: center;
+    }
+    
+    .company-item:last-child {
+        grid-column: auto;
+        justify-self: center;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+    /* Position OpenInfer (9th) and Rimba (10th) side by side */
+    .company-item:nth-child(9) {
+        grid-column: 1;
+    }
+    
+    .company-item:nth-child(10) {
+        grid-column: 2;
+        margin-top: -70px;
+    }
+    
+    /* Extellis (11th) goes to next row, column 1 */
+    .company-item:nth-child(11) {
+        grid-column: 1;
+        margin-top: -125px;
+        margin-left: -70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .companies-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 100%;
+    }
+    
+    /* Reset all grid column positioning for single column layout */
+    .company-item:nth-child(9),
+    .company-item:nth-child(10),
+    .company-item:nth-child(11) {
+        grid-column: 1;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    
+    /* All logos same width in single column */
+    .logo-image {
+        max-height: 90px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    
+    /* Cruise logo - 0.5x size */
+    .logo-image[alt="Cruise"] {
+        max-width: 100%;
+        width: 90%;
+        max-height: 55px;
+        padding-left: 30px;
+        height: auto;
+    }
+    
+    /* Doppel logo - 0.6x size */
+    .logo-image[alt="Doppel"] {
+        max-width: 100%;
+        width: 100%;
+        max-height: 54px;
+        height: auto;
+    }
+    
+    /* SirenOpt logo - 0.5x size */
+    .logo-image[alt="SirenOpt"] {
+        max-width: 100%;
+        width: 80%;
+        max-height: 45px;
+        padding-left: 40px;
+        height: auto;
+    }
+    
+    /* OpenInfer logo - 0.5x size */
+    .logo-image[alt="OpenInfer"] {
+        max-width: 100%;
+        width: 90%;
+        max-height: 45px;
+        padding-left: 10px;
+        height: auto;
+    }
+    
+    /* Override specific logo sizes to match width */
+    .logo-image[alt="Celect"] {
+        max-width: 100%;
+        width: 100%;
+        max-height: 112.5px;
+        height: auto;
+    }
+    
+    .logo-image[alt="Rimba"] {
+        max-width: 100%;
+        width: 100%;
+        max-height: 180px;
+        height: auto;
+    }
+    
+    /* Move Rimba logo up by 60px */
+    .company-item:nth-child(10) {
+        margin-top: -40px;
+    }
+    
+    /* Move Extellis logo up by 100px */
+    .company-item:last-child {
+        margin-top: -110px;
+    }
+    
+    .company-item:last-child .logo-image[alt="Extellis"] {
+        max-width: 100%;
+        width: 100%;
+        max-height: 200px;
+        height: auto;
+    }
+    
+    .mchn-logo {
+        max-width: 380px;
+        max-height: 114px;
+    }
+}
+
